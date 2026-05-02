@@ -1,9 +1,10 @@
 import fs from "node:fs";
-import { javascriptObject, ollama, parser } from "../lib/ollama.ts";
+import { ollama } from "../lib/ollama.ts";
 import Parser from "tree-sitter";
-import { analyseDirectDependencies } from "./analyse-dependencies-helper.ts";
+import { analyseDirectDependencies } from "./analyse-dependencies.ts";
 import path from "node:path";
 import { analyseCodebase } from "./analyse-codebase.ts";
+import { javascriptObject, parser } from "../lib/tree-sitter.ts";
 
 export async function analyseTree(file: string) {
   const fileExplainMap = new Map<string, string>();
