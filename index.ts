@@ -1,16 +1,20 @@
-import { twirlTimer } from "./src/helper/timer.ts";
+// import { twirlTimer } from "./src/helper/timer.ts";
 import { analyzeCode } from "./src/helper/analyse-code.ts";
+import { generateGlobalCommitMessage } from "./src/helper/analyse-git-difference.ts";
 
-async function generateDocs(projectPath: string) {
-  const timer = twirlTimer;
+// async function generateDocs(projectPath: string) {
+//   try {
+//     console.log("analysing code...");
+//     await analyzeCode(projectPath);
+//     console.log("write to files finished!");
+//   } finally {
+//   }
+// }
 
-  try {
-    console.log("analysing code...");
-    await analyzeCode(projectPath);
-    console.log("write to files finished!");
-  } finally {
-    clearInterval(timer);
-  }
+function generateCommitMessage() {
+  generateGlobalCommitMessage();
 }
 
-await generateDocs("/Volumes/Data 2/web/quotes-app-testing");
+generateCommitMessage();
+
+// await generateDocs("/Volumes/Data 2/web/quotes-app-testing");
