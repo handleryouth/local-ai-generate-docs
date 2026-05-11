@@ -54,7 +54,5 @@ export async function generateGlobalCommitMessage() {
     messages: [{ role: "user", content: prompt }],
   });
 
-  console.log(response.message.content);
-
   return response.message.content;
 }
