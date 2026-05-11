@@ -28,7 +28,7 @@ import { setImmediateInterval } from "./src/helper/set-immediate-interval.ts";
   const timer = twirlTimer();
   getRandomAdvice(abortSignal);
   try {
-    await generateReadmeOverview("/Volumes/Data 2/web/quotes-app-testing");
+    await generateReadmeOverview("/Volumes/Data 2/web/standalone-cli");
   } finally {
     clearInterval(timer);
     abortInstance.abort();
